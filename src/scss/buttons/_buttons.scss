@@ -1,0 +1,26 @@
+@mixin button-white{
+    border: 1px solid white;
+    padding: 12px 24px;
+    border-radius: 99px;
+    font-weight: 400;
+    background: white;
+    color: black;
+    transition: .3s ease-in-out;
+}
+@mixin button-white-hover{
+    background: transparent;
+    color: white;
+}
+@mixin button-trans{
+    border: 1px solid white;
+    padding: 12px 24px;
+    border-radius: 99px;
+    font-weight: 400;
+    background: transparent;
+    color: white;
+    transition: .3s ease-in-out;
+}
+@mixin button-trans-hover{
+    background: white;
+    color: black;
+}

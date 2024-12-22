@@ -1,0 +1,108 @@
+@import "../../../scss/main.scss";
+
+.dn-hb {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 60px;
+}
+
+.dn-hb-img {
+  width: 100%;
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+.dn-hb-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+
+  h2 {
+    font-size: 44px;
+    font-weight: 300;
+    margin-bottom: 18px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 500;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 33px;
+  }
+  @media (max-width: 1230px) {
+    h2 {
+      font-size: 35px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 30px;
+      max-width: 500px;
+    }
+    p {
+      font-size: 13px;
+      max-width: 300px;
+      line-height: 18px;
+    }
+  }
+  @media (max-width: 576px) {
+    h2 {
+      font-size: 25px;
+      max-width: 300px;
+    }
+    p {
+      font-size: 11px;
+    }
+  }
+}
+.down-arrow {
+  cursor: pointer;
+  position: absolute;
+  bottom: 30px;
+  left: 48%;
+  z-index: 99;
+  width: 45px;
+  .white-line-parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: -28px;
+    margin-left: 2px;
+    height: 30px;
+    overflow: hidden;
+    .white-line-child {
+      width: 1px;
+      height: 60px;
+      background: white;
+      animation: arrowAnim 2s infinite linear;
+    }
+    @keyframes arrowAnim {
+      0%{
+        transform: translateY(-50%);
+      }
+      100%{
+        transform: translateY(40px);
+      }
+      
+    }
+  }
+}

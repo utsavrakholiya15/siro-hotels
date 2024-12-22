@@ -1,0 +1,66 @@
+@import '../../../scss/main.scss';
+
+.member{
+    padding: 60px 0;
+}
+.member-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    @media (max-width:1060px) {
+        grid-template-columns: 1fr;
+        .member-grid-item{
+            margin-bottom: 50px;
+        }
+    }
+    .member-grid-item{
+        text-align: center;
+        color: var(--green);
+        h3{
+            font-size: 32px;
+            font-weight: 300;
+            margin-top: 25px;
+        }
+        p{
+            font-size: 16px;
+            font-weight: 400;
+            max-width: 352px;
+            margin: 18px auto;
+        }
+        button{
+            @include button-trans;
+            border: 1px solid var(--green);
+            color: var(--green);
+            margin-top: 10px;
+        }
+    }
+    @media (max-width:768px) {
+        img{
+            width: 30px;
+        }
+        .member-grid-item{
+            h3{
+                font-size: 28px;
+            }
+            p{
+                font-size: 14px;
+            }
+            button{
+                font-size: 13px;
+            }
+        }
+    }
+    @media (max-width:512px) {
+        .member-grid-item{
+            h3{
+                font-size: 21px;
+            }
+            p{
+                font-size: 12px;
+            }
+            button{
+                font-size: 11px;
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+@import "../../../scss/main.scss";
+
+.place {
+  position: relative;
+  width: 100%;
+  height: 84vh;
+}
+
+.place-video {
+  width: 100%;
+  height: 100%;
+  video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+.place-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  span {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+  h2 {
+    font-size: 44px;
+    font-weight: 300;
+    margin-bottom: 18px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 500;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 33px;
+  }
+  button {
+    @include button-trans;
+    &:hover{
+      @include button-trans-hover;
+
+    }
+  }
+  @media (max-width: 1230px) {
+    span {
+      font-size: 12px;
+    }
+    h2 {
+      font-size: 35px;
+    }
+    p {
+      font-size: 14px;
+      max-width: 700px;
+    }
+    button {
+      font-size: 12px;
+    }
+  }
+  @media (max-width:768px) {
+    text-align: center;
+    span{font-size: 12px;}
+    h2{font-size: 30px;}
+    p{font-size: 13px;
+    max-width: 300px;}
+  }
+  @media (max-width:576px) {
+    span{font-size: 10px;}
+    h2{
+      font-size:25px ;
+      max-width: 300px;
+    }
+    p{
+      font-size: 11px;
+    }
+    button{font-size: 11px;}
+  }
+}
