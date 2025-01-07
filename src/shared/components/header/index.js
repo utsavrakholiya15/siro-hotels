@@ -29,7 +29,6 @@ export default function Header() {
             >
               Hotels
             </span>
-            <span>Our Philosophy</span>
             <span
               onClick={() => {
                 navigate("/journal");
@@ -44,6 +43,8 @@ export default function Header() {
             >
               Our App
             </span>
+            <span>Our Philosophy</span>
+
           </nav>
           <div onClick={handleOnMenu} className="menu">
             <div className="menu-bar menu-bar1"></div>
